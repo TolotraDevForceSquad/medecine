@@ -47,17 +47,22 @@ const Login = ({ navigation }) => {
         }]}>
             <Text style={{
                 fontSize: 25,
-                margin: 10, 
+                margin: 10,
+                color: "white", 
             }}>Connexion</Text>
             <View style={[xs.ctn, {
                 width: "80%",
             }]}>
-                <Text>Nom d'utilisateur</Text>
+                <Text style={{
+                    color: "white"
+                }}>Nom d'utilisateur</Text>
                 <TextInput style={xs.inp}
                     value={user}
                     onChangeText={setUser}
                 />
-                <Text>Mot de passe</Text>
+                <Text style={{
+                    color: "white"
+                }}>Mot de passe</Text>
                 <TextInput style={xs.inp}
                     value={password}
                     onChangeText={setPassword}
@@ -77,7 +82,9 @@ const Login = ({ navigation }) => {
                         login(user, password);
                     }}
                 >
-                    <Text>Connexion</Text>
+                    <Text style={{
+                        color: "#1d8cf8"
+                    }}>Connexion</Text>
                 </Pressable>
                 <Pressable style={[xs.inp,{ 
                     borderColor: "#00bf9a",
@@ -88,7 +95,9 @@ const Login = ({ navigation }) => {
                         navigation.navigate("Sign");
                     }}
                 >
-                    <Text>S'Enregistrer</Text>
+                    <Text style={{
+                        color: '#00bf9a'
+                    }}>S'Enregistrer</Text>
                 </Pressable>
             </View>
             <Boo show={show} hide={() => setShow(false)} message={message} />

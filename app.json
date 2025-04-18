@@ -1,12 +1,12 @@
 {
   "expo": {
     "name": "dev-expo",
-    "slug": "noone",
+    "slug": "tolotra",
     "version": "1.0.0",
-    "icon": "./assets/imgs/log.png",
+    "icon": "/assets/imgs/log.png",
     "extra": {
       "eas": {
-        "projectId": "c310ae8a-938e-4b6e-b6c4-09da62fbe9d4"
+        "projectId": "ef70f3ac-7b77-4a90-bf32-b4f75dea7658"
       }
     },
     "owner": "tolotra301"

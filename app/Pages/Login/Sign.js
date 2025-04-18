@@ -42,22 +42,29 @@ const Sign = ({ navigation }) => {
             <Text style={{
                 fontSize: 25,
                 margin: 10, 
+                color: "white"
             }}>S'Enregistrer</Text>
             <View style={[xs.ctn, {
                 width: "80%",
             }]}>
-                <Text>Nom d'utilisateur</Text>
+                <Text style={{
+                    color: "white"
+                }}>Nom d'utilisateur</Text>
                 <TextInput style={xs.inp}
                     value={user}
                     onChangeText={setUser}
                 />
-                <Text>Mot de passe</Text>
+                <Text style={{
+                    color: "white"
+                }}>Mot de passe</Text>
                 <TextInput style={xs.inp}
                     value={password}
                     onChangeText={setPassword}
                     secureTextEntry
                 />
-                <Text>Confirme mot de passe</Text>
+                <Text style={{
+                    color: "white"
+                }}>Confirme mot de passe</Text>
                 <TextInput style={xs.inp}
                     value={confirmPassword}
                     onChangeText={setConfirmPassword}
@@ -83,7 +90,9 @@ const Sign = ({ navigation }) => {
                         navigation.navigate("Login");
                     } }
                 >
-                    <Text>Enregistrer</Text>
+                    <Text style={{
+                        color: "#00bf9a"
+                    }}>Enregistrer</Text>
                 </Pressable>
                 <Pressable style={[xs.inp,{ 
                     borderColor: "#1d8cf8",
@@ -94,7 +103,9 @@ const Sign = ({ navigation }) => {
                         navigation.navigate("Login");
                     }}}
                 >
-                    <Text>Connexion</Text>
+                    <Text style={{
+                        color: "#1d8cf8"
+                    }}>Connexion</Text>
                 </Pressable>
             </View>
             <Boo show={show} hide={() => setShow(false)} message={message} />

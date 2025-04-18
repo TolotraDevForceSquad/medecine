@@ -23,23 +23,30 @@ const AddMed = () => {
             }]}>
                 <Text style={{
                     fontSize: 25,
-                    margin: 10, 
-                }}>Ajouter un medecin</Text>
+                    margin: 10,
+                    color: "white" 
+                }}>Formulaire medecin</Text>
                 <View style={[xs.ctn, {
                     width: "80%",
                 }]}>
-                    <Text>Nom</Text>
+                    <Text style={{
+                        color: 'white'
+                    }}>Nom</Text>
                     <TextInput
                         value={nom}
                         onChangeText={(text) => setNom(text)}
                         style={xs.inp}
                     />
-                    <Text>Nombre de jour</Text>
+                    <Text style={{
+                        color: 'white'
+                    }}>Nombre de jour</Text>
                     <TextInput style={xs.inp}
                         value={nbj}
                         onChangeText={(text) => setnbj(text)}
                     />
-                    <Text>Taux journalier</Text>
+                    <Text style={{
+                        color: 'white'
+                    }}>Taux journalier</Text>
                     <TextInput style={xs.inp}
                         value={txj}
                         onChangeText={(text) => setTxj(text)}
@@ -57,7 +64,9 @@ const AddMed = () => {
                             }
                         }}
                     >
-                        <Text>Enregistrer</Text>
+                        <Text style={{
+                            color: '#1d8cf8'
+                        }}>Enregistrer</Text>
                     </Pressable>
                     <Pressable style={[xs.inp,{ 
                         borderColor: "#00bf9a",
@@ -69,7 +78,9 @@ const AddMed = () => {
                             clear();
                         }}
                     >
-                        <Text>Annuler</Text>
+                        <Text style={{
+                            color: '#00bf9a'
+                        }}>Annuler</Text>
                     </Pressable>
                 </View>
             </View>

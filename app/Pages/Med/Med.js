@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import AddMed from "./AddMed";
 import MyOption from "../../Comp/Option";
 
-const Med = () => {
+const Med = ({ navigation }) => {
     const {
         id, setId,
         nom, setNom,
@@ -13,6 +13,7 @@ const Med = () => {
         txj, setTxj,
         list_med,
         med,
+        clear,
         showAdd, setShowAdd,
         showEdit, setShowEdit,
         showOption, setShowOption,
@@ -38,7 +39,14 @@ const Med = () => {
 
     return (
         <View style={[xs.bg_main, { padding: 10 }]}>
-            <Text style={xs.titre_1}>Médecin</Text>
+            <View style={[xs.two_tri, {paddingBottom: 0}]}>
+                <Text style={xs.titre_1}>Médecin</Text>
+                <Pressable
+                    onPress={() => navigation.navigate('Login')}
+                >
+                    <Image source={require('../../../assets/imgs/dec.png')} style={{ width: 30, height: 30, tintColor: '#ffffff' }} />
+                </Pressable>
+            </View>
             <Text style={xs.titre_2}>Gérer les médecins</Text>
 
             <TextInput
@@ -51,33 +59,32 @@ const Med = () => {
                 <View style={xs.two_tri}>
                     <Text>
                         <Text style={{ 
-                            fontSize: 15, WebkitTextFillColor: '#ffffff',
-
+                            fontSize: 15, color: 'white',
                         }}>Total : </Text>
                         <Text style={{ 
-                            fontSize: 15, WebkitTextFillColor: '#4c8df6', 
+                            fontSize: 15, color: '#0bf019', 
 
                         }}>{stats.total}</Text>
                     </Text>
 
                     <Text>
                         <Text style={{ 
-                            fontSize: 15, WebkitTextFillColor: '#ffffff',
+                            fontSize: 15, color: 'white',
 
                         }}>Min : </Text>
                         <Text style={{ 
-                            fontSize: 15, WebkitTextFillColor: '#4c8df6', 
+                            fontSize: 15, color: '#0bf019', 
 
                         }}>{stats.min}</Text>
                     </Text>
 
                     <Text>
                         <Text style={{ 
-                            fontSize: 15, WebkitTextFillColor: '#ffffff',
+                            fontSize: 15, color: 'white',
 
-                        }}>Mex : </Text>
+                        }}>Max : </Text>
                         <Text style={{ 
-                            fontSize: 15, WebkitTextFillColor: '#4c8df6', 
+                            fontSize: 15, color: '#0bf019', 
 
                         }}>{stats.max}</Text>
                     </Text>
@@ -91,15 +98,15 @@ const Med = () => {
                             select(i.id, i.nom, i.nb_jours, i.taux_journalier);
                         }}
                     >
-                        <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Dr. {i.nom}</Text>
-                        <Text>Nombre de jour : {i.nb_jours}</Text>
-                        <Text>Taux journalier : {i.taux_journalier}</Text>
-                        <Text>Prestation : {i.prestation}</Text>
+                        <Text style={{ fontWeight: 'bold', fontSize: 15, color: '#0bf019' }}>Dr. {i.nom}</Text>
+                        <Text style={{ color: '#ffffff' }}>Nombre de jour : {i.nb_jours}</Text>
+                        <Text style={{ color: '#ffffff' }}>Taux journalier : {i.taux_journalier}</Text>
+                        <Text style={{ color: '#ffffff' }}>Prestation : {i.prestation}</Text>
                     </Pressable>
                 ))}
             </ScrollView>
 
-            <Pressable style={xs.addm} onPress={() => setShowAdd(true)}>
+            <Pressable style={xs.addm} onPress={() => {setShowAdd(true);clear();}}>
                 <Image source={require('../../../assets/imgs/ic_add.png')} style={{ width: 50, height: 50, tintColor: '#ffffff' }} />
             </Pressable>
 

@@ -29,6 +29,7 @@ export default StyleSheet.create({
         borderWidth: 1,
         borderColor: "#2b3553",
         borderRadius: 5,
+        color: 'white'
     },
     addm: {
         position: 'absolute', 
