@@ -104,3 +104,4 @@ app.delete('/api/medecins/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Serveur API lancé sur http://localhost:${PORT}`);
 });
+
